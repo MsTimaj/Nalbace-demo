@@ -4,7 +4,7 @@ Keep vital relationships on course. A phone-first local prototype for PayPal inv
 
 ## Try the live demo
 
-**[Open Nalbace — no download or account required](https://nalbace-demo.workspace-283029.chatgpt.site)**
+**[Open Nalbace — no download or account required](https://nalbace.app)**
 
 Use fictional customers to review a dispute, confirm a sample check and explore email-only or optional-call reminder schedules. Each visitor has a separate browser-local workspace. Reset demo restores the examples. No real email, AI model request, phone call or payment can be made from the public sample. Please do not enter real customer information.
 
