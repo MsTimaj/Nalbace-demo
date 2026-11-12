@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><title>Nalbace silver-bordered app icon</title><defs>
+<linearGradient id="flow" x1="23" y1="35" x2="77" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#2457A7"/><stop offset="1" stop-color="#66CDAA"/></linearGradient>
+<linearGradient id="silver" x1="12" y1="8" x2="85" y2="93" gradientUnits="userSpaceOnUse"><stop stop-color="#8B97A5"/><stop offset=".2" stop-color="#F8FAFC"/><stop offset=".39" stop-color="#A4AFBD"/><stop offset=".53" stop-color="#E8EDF3"/><stop offset=".74" stop-color="#929EAC"/><stop offset="1" stop-color="#EEF2F6"/></linearGradient>
+<linearGradient id="tile" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF0F7"/></linearGradient>
+<g id="paths"><path d="M23 73V35"/><path d="M77 27V65"/><path d="M23 35C23 19 42 15 51 28L77 65C77 81 58 85 49 72Z"/></g>
+<g id="mark" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke="url(#flow)"><use href="#paths"/></g>
+<g id="outlined"><use href="#paths" stroke="url(#silver)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><use href="#mark"/></g>
+</defs><rect x="4" y="4" width="92" height="92" rx="23" fill="url(#tile)" stroke="url(#silver)" stroke-width="2"/><use href="#outlined" transform="translate(8 8) scale(.84)"/></svg>

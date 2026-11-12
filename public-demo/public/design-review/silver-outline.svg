@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="680" viewBox="0 0 960 680" fill="none">
+<title>Nalbace silver outline preview</title><desc>Approved mark, thin silver outline on the mark, and silver border on an app tile. These are review options only.</desc>
+<defs>
+<linearGradient id="flow" x1="23" y1="35" x2="77" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#2457A7"/><stop offset="1" stop-color="#66CDAA"/></linearGradient>
+<linearGradient id="silver" x1="12" y1="8" x2="85" y2="93" gradientUnits="userSpaceOnUse"><stop stop-color="#8B97A5"/><stop offset=".2" stop-color="#F8FAFC"/><stop offset=".39" stop-color="#A4AFBD"/><stop offset=".53" stop-color="#E8EDF3"/><stop offset=".74" stop-color="#929EAC"/><stop offset="1" stop-color="#EEF2F6"/></linearGradient>
+<linearGradient id="tile" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#EAF0F7"/></linearGradient>
+<g id="paths"><path d="M23 73V35"/><path d="M77 27V65"/><path d="M23 35C23 19 42 15 51 28L77 65C77 81 58 85 49 72Z"/></g>
+<g id="mark" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" stroke="url(#flow)"><use href="#paths"/></g>
+<g id="outlined"><use href="#paths" stroke="url(#silver)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/><use href="#mark"/></g>
+</defs>
+<rect width="960" height="680" rx="24" fill="#F4F7FA"/>
+<text x="48" y="61" fill="#2457A7" font-family="Arial,sans-serif" font-size="15" letter-spacing="3">NALBACE / DESIGN REVIEW</text>
+<text x="48" y="108" fill="#172C3E" font-family="Arial,sans-serif" font-size="32" font-weight="700">A touch of silver</text>
+<text x="48" y="141" fill="#53677B" font-family="Arial,sans-serif" font-size="17">Original colors. Original shape. A quieter metallic edge.</text>
+<g fill="#FFF" stroke="#DBE2EA"><rect x="36" y="179" width="280" height="359" rx="20"/><rect x="340" y="179" width="280" height="359" rx="20"/><rect x="644" y="179" width="280" height="359" rx="20"/></g>
+<use href="#mark" transform="translate(66 211) scale(2.2)"/>
+<use href="#outlined" transform="translate(370 211) scale(2.2)"/>
+<g transform="translate(674 211) scale(2.2)"><rect x="4" y="4" width="92" height="92" rx="23" fill="url(#tile)" stroke="url(#silver)" stroke-width="2"/><use href="#mark" transform="translate(8 8) scale(.84)"/></g>
+<g fill="#172C3E" font-family="Arial,sans-serif" text-anchor="middle" font-size="19" font-weight="700"><text x="176" y="469">Approved original</text><text x="480" y="469">Silver around the mark</text><text x="784" y="469">Silver around the tile</text></g>
+<g fill="#53677B" font-family="Arial,sans-serif" text-anchor="middle" font-size="14"><text x="176" y="500">Current logo</text><text x="480" y="500">Thin metallic outline</text><text x="784" y="500">Original mark inside</text></g>
+<text x="48" y="590" fill="#172C3E" font-family="Arial,sans-serif" font-size="18">The silver catches light without taking over the blue and green.</text>
+<text x="48" y="625" fill="#53677B" font-family="Arial,sans-serif" font-size="15">Preview only — no change to the approved logo or app icon.</text>
+</svg>

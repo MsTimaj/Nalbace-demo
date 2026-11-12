@@ -1,0 +1,1 @@
+import {renderToString} from "react-dom/server";import Workspace from "./app/workspace.tsx";import {sampleWorkspace} from "./demo-engine.ts";export function render(){return renderToString(<Workspace initial={sampleWorkspace()}/>);}

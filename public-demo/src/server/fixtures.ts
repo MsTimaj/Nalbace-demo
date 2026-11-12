@@ -1,0 +1,17 @@
+import type { ClientCase } from "../domain/cases.ts";
+export const DEMO_OWNER={id:"owner-demo",merchantId:"merchant-demo"};
+export function fixtures(now=new Date()): ClientCase[] {
+  const date=(days:number)=>new Date(now.getTime()+days*86400000).toISOString();
+  const invoice=(id:string,number:string,balanceMinor:number,days=-18)=>({id,number,balanceMinor,currency:"USD" as const,dueDate:date(days).slice(0,10),servicePeriod:"September services"});
+  const base={merchantId:DEMO_OWNER.merchantId,verifiedContact:true,version:1,hold:"none" as const,nextActionAt:date(-1),lastContactAt:date(-8),firstEligibleAt:date(-1),evidenceAt:now.toISOString(),source:"fixture" as const,receipts:[],history:[]};
+  return [
+    {...base,id:"elm",name:"Elm Consulting",contact:"billing@elm.example",preference:"check",lastContactAt:date(-14),invoices:[invoice("inv-elm-1038","1038",40000,-21)],receipts:[{id:"receipt-elm",kind:"check",state:"received",receivedAt:date(-12),allocations:[{invoiceId:"inv-elm-1038",amountMinor:40000}]}],
+      pastedReplies:[{id:"sample-elm-check-reply",at:date(-12),source:"owner-pasted",text:"Subject: Re: Payment reminder for invoice #1038\n\nHello Oak & Harbor team,\n\nI delivered a $400.00 check to your office for invoice #1038. Please check with the owner before sending another reminder.\n\nThank you,\nAccounts Payable\nElm Consulting"}],
+      customerUpdates:[{id:"sample-elm-check-received",kind:"payment-claim",at:date(-11),note:"Sample owner review: the $400 check was received. Awaiting bank clearance; no further reminders until confirmed.",followUpAt:null,source:"owner-recorded"}],
+      automaticFollowup:{cycle:JSON.stringify([["inv-elm-1038"],"initial"]),startedOn:date(-14).slice(0,10),stage:"overdue",invoiceIds:["inv-elm-1038"],status:"held",reason:"Customer reported a delivered $400 check. Owner recorded receipt; confirm clearance before any further contact.",completed:[{key:"first",on:date(-14).slice(0,10),channel:"email",text:"Subject: Payment reminder for invoice #1038\n\nHello Elm Consulting,\n\nThis is a friendly reminder from Oak & Harbor Services that invoice #1038 has an outstanding balance of $400.00.\n\nIf you have already sent payment, please reply with the payment details so we can update your account.\n\nThank you,\nBilling team\nOak & Harbor Services"}]},
+      history:[{at:date(-11),text:"Sample owner recorded receipt of the $400 check. Clearance has not been confirmed."},{at:date(-12),text:"Sample customer reply reported a delivered check. Routine reminders paused for payment review; no real email or AI request occurred."},{at:date(-14),text:"Sample first reminder email for invoice #1038. No real email was sent."}]},
+    {...base,id:"birch",name:"Birch Studio",contact:"billing@birch.example",preference:"paypal",invoices:[invoice("inv-birch-1041","1041",25000),invoice("inv-birch-1045","1045",15000)],history:[{at:date(-8),text:"Sample history: invoice copies were sent. No reply or receipt recorded."}]},
+    {...base,id:"river",name:"River Works",contact:"billing@river.example",preference:"paypal",invoices:[invoice("inv-river-1042","1042",20000)],history:[{at:date(-8),text:"Sample history: client promised payment yesterday. Check current payment evidence before following up."}]},
+    {...base,id:"cedar",name:"Cedar & Co.",contact:"billing@cedar.example",preference:"paypal",nextActionAt:date(4),invoices:[invoice("inv-cedar-1040","1040",30000)],history:[{at:date(-3),text:"Waiting until the agreed review date. No contact needed today."}]}
+  ];
+}

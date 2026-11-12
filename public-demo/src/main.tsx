@@ -1,0 +1,10 @@
+import React,{useState} from "react";
+import {createRoot} from "react-dom/client";
+import Workspace from "./app/workspace.tsx";
+import {createDemoEngine,installDemoTransport} from "./demo-engine.ts";
+import "./app/globals.css";
+let storage:Storage|undefined;try{storage=window.localStorage;}catch{}
+const engine=createDemoEngine(storage);installDemoTransport(engine);
+class SampleBoundary extends React.Component<{children:React.ReactNode;onReset:()=>void},{failed:boolean}>{state={failed:false};static getDerivedStateFromError(){return {failed:true};}render(){return this.state.failed?<section className="card" role="alert"><h1>Let’s reload the sample.</h1><p>No real accounts or payments are affected.</p><button className="primary" onClick={()=>{this.props.onReset();this.setState({failed:false});}}>Reset sample workspace</button></section>:this.props.children;}}
+function Demo(){const [revision,setRevision]=useState(0),[resetting,setResetting]=useState(false);return <><aside className="public-demo-banner"><div><strong>Try Nalbace</strong><span>Fictional customers · your own browser workspace · no real messages, calls or payments. Please use sample information only.</span></div><button type="button" onClick={()=>{if(!resetting){setResetting(true);return;}engine.reset();window.history.replaceState(null,"",window.location.pathname);setRevision(v=>v+1);setResetting(false);}}>{resetting?"Confirm reset":"Reset demo"}</button>{resetting&&<button type="button" onClick={()=>setResetting(false)}>Cancel</button>}</aside><SampleBoundary key={revision} onReset={()=>{engine.reset();setRevision(v=>v+1);}}><Workspace initial={engine.read()}/></SampleBoundary><div className="public-demo-links"><a href="https://github.com/MsTimaj/Nalbace-demo" target="_blank" rel="noopener noreferrer">Source & integration evidence</a><a href="https://youtu.be/2YvKdX9y88A" target="_blank" rel="noopener noreferrer">Watch the recorded provider tests</a></div></>;}
+createRoot(document.getElementById("root")!).render(<Demo/>);

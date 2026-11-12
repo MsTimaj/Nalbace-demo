@@ -2,11 +2,19 @@
 
 Keep vital relationships on course. A phone-first local prototype for PayPal invoice follow-up, customer replies and owner review.
 
+## Try the live demo
+
+**[Open Nalbace — no download or account required](https://nalbace-demo.workspace-283029.chatgpt.site)**
+
+Use fictional customers to review a dispute, confirm a sample check and explore email-only or optional-call reminder schedules. Each visitor has a separate browser-local workspace. Reset demo restores the examples. No real email, AI model request, phone call or payment can be made from the public sample. Please do not enter real customer information.
+
+The original local integration build and its setup instructions remain below. The public browser edition is in `public-demo/`; it reuses the interface and deterministic workflow rules with a browser-local simulation adapter. Recorded provider tests are separate from this simulation.
+
 ## Download and run
 
 **[Download Nalbace as a ZIP](https://github.com/MsTimaj/Nalbace-demo/archive/refs/heads/main.zip)** · **[Watch the demo video](https://youtu.be/2YvKdX9y88A)**
 
-This release runs on your computer. There is no hosted live-demo URL yet. The included sample customers need no provider account, API key or payment.
+This release runs on your computer. A no-install browser demo is linked above. The included sample customers need no provider account, API key or payment.
 
 1. Install **Node.js 22.14 or newer**, including npm, from [nodejs.org](https://nodejs.org/en/download).
 2. Click **Download Nalbace as a ZIP** above (or GitHub's green **Code → Download ZIP**).
