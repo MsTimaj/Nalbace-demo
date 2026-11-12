@@ -6,6 +6,8 @@ Keep vital relationships on course. A phone-first local prototype for PayPal inv
 
 **[Open Nalbace — no download or account required](https://nalbace.app)**
 
+Also available at **[nalbace.com](https://nalbace.com)**.
+
 Use fictional customers to review a dispute, confirm a sample check and explore email-only or optional-call reminder schedules. Each visitor has a separate browser-local workspace. Reset demo restores the examples. No real email, AI model request, phone call or payment can be made from the public sample. Please do not enter real customer information.
 
 The original local integration build and its setup instructions remain below. The public browser edition is in `public-demo/`; it reuses the interface and deterministic workflow rules with a browser-local simulation adapter. Recorded provider tests are separate from this simulation.
