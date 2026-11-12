@@ -2,17 +2,31 @@
 
 Keep vital relationships on course. A phone-first local prototype for PayPal invoice follow-up, customer replies and owner review.
 
-## Run the working sample
+## Download and run
 
-Requires Node.js 22.14 or newer and npm. No provider account or payment is needed for the included synthetic customer workflow.
+**[Download Nalbace as a ZIP](https://github.com/MsTimaj/Nalbace-demo/archive/refs/heads/main.zip)** · **[Watch the demo video](https://youtu.be/2YvKdX9y88A)**
+
+This release runs on your computer. There is no hosted live-demo URL yet. The included sample customers need no provider account, API key or payment.
+
+1. Install **Node.js 22.14 or newer**, including npm, from [nodejs.org](https://nodejs.org/en/download).
+2. Click **Download Nalbace as a ZIP** above (or GitHub's green **Code → Download ZIP**).
+3. Extract the ZIP. Open the extracted `Nalbace-demo-main` folder, then its **app** folder.
+4. Open a terminal inside that **app** folder. On Windows, right-click an empty area in that folder and choose **Open in Terminal**.
+5. Run these commands, one at a time:
 
 ```sh
-cd app
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:3000. Keep the server on this computer; this build does not provide hosted authentication or tenant separation.
+6. Wait for the server to report that it is ready, then open **http://127.0.0.1:3000/** in your browser.
+7. Leave the terminal running while using the app. Press **Ctrl+C** in the terminal to stop it when finished.
+
+Keep this build on your computer; it does not provide hosted authentication or tenant separation. Sample changes are saved locally and are not shared with other visitors.
+
+### Optional developer checks
+
+From the same **app** folder:
 
 ```sh
 npm test
